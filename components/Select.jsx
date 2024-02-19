@@ -35,8 +35,9 @@ export default function Select({ items, selected, setSelected }) {
               leave="transition ease-in duration-100"
               leaveFrom="opacity-100"
               leaveTo="opacity-0"
+              // className="w-full"
             >
-              <Listbox.Options className="absolute z-10 mt-1 w-48  bg-white shadow-lg max-h-60 rounded-md py-1 text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none sm:text-sm">
+              <Listbox.Options className="absolute z-10 mt-1 w-52  bg-white shadow-lg max-h-60 rounded-md py-1 text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none sm:text-sm">
                 {items.map((item) => (
                   <Listbox.Option
                     key={item.id}
