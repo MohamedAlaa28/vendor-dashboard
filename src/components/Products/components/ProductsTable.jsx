@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { useRef, useState, useEffect } from "react";
 
 const ProductsTable = ({ ProductsData }) => {
@@ -136,7 +135,7 @@ const ProductsTable = ({ ProductsData }) => {
                     <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm sm:pl-6">
                       <div className="flex items-center">
                         <div className="h-10 w-10 flex-shrink-0 ">
-                          <Image
+                          <img
                             width={25}
                             height={25}
                             className="h-10 w-10 rounded-full object-cover "

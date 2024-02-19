@@ -1,9 +1,7 @@
-"use client";
-
 import { useState } from "react";
 import ProductsEmpty from "./components/ProductsEmpty";
 import ProductsTable from "./components/ProductsTable";
-import Select from "../components/Select";
+import Select from "../../../public/components/Select";
 import { ProductsData } from "../../../public/Data/ProductData";
 
 const productOptions = [

@@ -1,13 +1,10 @@
-"use client";
 import { useRef, useState } from "react";
-import Link from "next/link";
 import OrdersDropDown from "./components/OrdersDropDown";
 import OrdersPopUp from "./components/OrdersPopUp";
 import SimCardDownloadOutlinedIcon from "@mui/icons-material/SimCardDownloadOutlined";
 import { products } from "../../../public/Data/productsDataOrders1";
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
+import { Link } from "react-router-dom";
+
 export default function Orders() {
   const checkbox = useRef();
   const [checked, setChecked] = useState(false);
@@ -15,7 +12,7 @@ export default function Orders() {
   const [selectedProduct, setSelectedProduct] = useState([]);
 
   function toggleAll() {
-    setSelectedProduct(checked || indeterminate ? [] : product);
+    setSelectedProduct(checked || indeterminate ? [] : products);
     setChecked(!checked && !indeterminate);
     setIndeterminate(false);
   }

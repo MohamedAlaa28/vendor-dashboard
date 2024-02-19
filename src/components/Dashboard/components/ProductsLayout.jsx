@@ -64,7 +64,7 @@ export default function ProductsLayout() {
                           }}
                         >
                           <img
-                            src="/images/Img - product 1@2x.png"
+                            src="./images/Img - product 1@2x.png"
                             width={40}
                             height={50}
                             alt="product"
@@ -72,7 +72,7 @@ export default function ProductsLayout() {
                           // objectFit="contain"
                           />
                         </div>
-                        <p className="self-center py-2 text-[#707082] text-sm">Polo Shirt</p>
+                        <p className="self-center text-[#707082] text-sm ml-3">Polo Shirt</p>
                       </div>
                     </th>
                     <td className="whitespace-nowrap px-6 py-4 text-sm text-gray-500">

@@ -15,8 +15,7 @@ export default function TotalCard() {
           </div>
           <div className="flex flex-col justify-between top-3 right-0 h-auto absolute">
             <img
-              className=" "
-              src={"/images/bg-TotalCardImg.svg"}
+              src="./images/bg-TotalCardImg.svg"
               width={84}
               height={35}
               alt="empty product"
@@ -37,7 +36,7 @@ export default function TotalCard() {
           <div className="flex flex-col justify-between top-3 right-0 h-auto absolute">
             <img
               className=" "
-              src={"/images/bg-TotalCardImg.svg"}
+              src="./images/bg-TotalCardImg.svg"
               width={84}
               height={35}
               alt="empty product"
@@ -58,7 +57,7 @@ export default function TotalCard() {
           <div className="flex flex-col justify-between top-3 right-0 h-auto absolute">
             <img
               className=" "
-              src={"/images/bg-TotalCardImg.svg"}
+              src="./images/bg-TotalCardImg.svg"
               width={84}
               height={35}
               alt="empty product"
@@ -79,7 +78,7 @@ export default function TotalCard() {
           <div className="flex flex-col justify-between top-3 right-0 h-auto absolute">
             <img
               className=" "
-              src={"/images/bg-TotalCardImg.svg"}
+              src="./images/bg-TotalCardImg.svg"
               width={84}
               height={35}
               alt="empty product"

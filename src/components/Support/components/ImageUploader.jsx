@@ -1,27 +1,8 @@
-import React, { useEffect, useState } from 'react';
-// import axios from 'axios';
-// import { useDropzone } from 'react-dropzone';
+import { useEffect, useState } from 'react';
 import FileUploadOutlinedIcon from '@mui/icons-material/FileUploadOutlined';
-import Image from 'next/image';
 
 export default function ImageUploader({ setImageUrl, imageUrl }) {
   const [files, setFiles] = useState([]);
-
-
-//   const { getRootProps, getInputProps } = useDropzone({
-//     // accept: 'image/*',
-//     multiple: true,
-//     maxSize: 500000,
-//     onDrop: (acceptedFiles) => {
-//       setFiles(
-//         acceptedFiles.map((file) =>
-//           Object.assign(file, {
-//             preview: URL.createObjectURL(file),
-//           })
-//         )
-//       );
-//     },
-//   });
 
   useEffect(() => {
     const uploadURL = process.env.NEXT_PUBLIC_CLOUDINARY_URL; // Use NEXT_PUBLIC_ prefix for Next.js environment variables
@@ -54,7 +35,7 @@ export default function ImageUploader({ setImageUrl, imageUrl }) {
   const thumbs = files.map((file) => (
     <div key={file.name}>
       <div>
-        <Image
+        <img
           width={24}
           height={24}
           className="inline-flex border-2 border-gray-100"
@@ -89,7 +70,7 @@ export default function ImageUploader({ setImageUrl, imageUrl }) {
       <aside className="flex flex-row flex-wrap mt-4">
         {imageUrl ? (
           imageUrl.map((url, index) => (
-            <Image
+            <img
               key={index}
               width={24}
               height={24}

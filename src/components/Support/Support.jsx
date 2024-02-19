@@ -1,6 +1,5 @@
-"use client";
 import { useState } from "react";
-import Select from "../components/Select";
+import Select from "../../../public/components/Select";
 import SupportTable from "./components/SupportTable";
 import ModelCreateMessage from "./components/ModelCreateMessage";
 import { MessagesList } from "/public/Data/MessagesListData";

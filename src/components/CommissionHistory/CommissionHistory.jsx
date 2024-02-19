@@ -1,9 +1,8 @@
 "use client";
 import { useState } from "react";
 import SimCardDownloadOutlinedIcon from "@mui/icons-material/SimCardDownloadOutlined";
-import Select from "../components/Select";
-import Image from "next/image";
-import CommissionHistoryFilter from "./components/commissionHistoryFilter";
+import Select from "../../../public/components/Select";
+import CommissionHistoryFilter from "./components/CommissionHistoryFilter";
 
 
 const productOptions = [
@@ -155,7 +154,7 @@ export default function CommissionHistory() {
                 </table>
               ) : (
                 <div className="lg:block relative flex-1 w-full bg-white px-[435px] py-24">
-                  <Image
+                  <img
                     className="object-cover"
                     src="/Commission history.svg"
                     alt=""

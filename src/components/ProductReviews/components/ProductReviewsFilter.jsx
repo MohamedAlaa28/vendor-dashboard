@@ -1,16 +1,12 @@
-import { Fragment, useRef, useState } from "react";
-// import "react-responsive-modal/styles.css";
+import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
-import CalendarInput from "../../components/CalendarInput";
-import Image from "next/image";
+import CalendarInput from "../../../../public/components/CalendarInput";
 
 
 export default function ProductReviewsFilter() {
   const [open, setOpen] = useState(false);
   const onOpenModal = () => setOpen(true);
-  const onCloseModal = () => setOpen(false);
-  const cancelButtonRef = useRef(null);
 
   return (
     <div style={{ borderRadius: "10px" }} className="popup">
@@ -119,7 +115,7 @@ export default function ProductReviewsFilter() {
                               >
                                 <div className="flex row gap-2">
                                   5
-                                  <Image
+                                  <img
                                     width={20}
                                     height={20}
                                     src="/images/golden star.svg"
@@ -141,7 +137,7 @@ export default function ProductReviewsFilter() {
                               >
                                 <div className="flex row gap-2">
                                   4
-                                  <Image
+                                  <img
                                     width={20}
                                     height={20}
                                     src="/images/golden star.svg"
@@ -163,7 +159,7 @@ export default function ProductReviewsFilter() {
                               >
                                 <div className="flex row gap-2">
                                   3
-                                  <Image
+                                  <img
                                     width={20}
                                     height={20}
                                     src="/images/golden star.svg"
@@ -185,7 +181,7 @@ export default function ProductReviewsFilter() {
                               >
                                 <div className="flex row gap-2">
                                   2
-                                  <Image
+                                  <img
                                     width={20}
                                     height={20}
                                     src="/images/golden star.svg"
@@ -207,7 +203,7 @@ export default function ProductReviewsFilter() {
                               >
                                 <div className="flex row gap-2">
                                   1
-                                  <Image
+                                  <img
                                     width={20}
                                     height={20}
                                     src="/images/golden star.svg"

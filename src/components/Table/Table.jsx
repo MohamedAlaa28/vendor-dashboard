@@ -1,18 +1,4 @@
-import Image from "next/image";
-
-const people = [
-  {
-    id: 1,
-    name: "Lindsay Walton",
-    title: "Front-end Developer",
-    department: "Optimization",
-    email: "lindsay.walton@example.com",
-    role: "Member",
-    image:
-      "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-  },
-  // More people...
-];
+import { people } from "../../../public/Data/peaple";
 
 export default function Example() {
   return (
@@ -82,7 +68,7 @@ export default function Example() {
                       <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm sm:pl-6">
                         <div className="flex items-center">
                           <div className="flex-shrink-0">
-                            <Image
+                            <img
                               width={52}
                               height={52}
                               className="rounded-full"

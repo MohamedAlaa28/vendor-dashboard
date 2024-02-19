@@ -1,7 +1,6 @@
-import React, { useRef, Fragment, useState } from "react";
+import { useRef, Fragment, useState } from "react";
 import { Menu, Dialog, Transition } from "@headlessui/react";
-import close from "/public/Icons/close.svg";
-import Image from "next/image";
+import close from "../../../../public/icons/close.svg";
 import ImageUploader from "./ImageUploader.jsx";
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Editor from "./Editor.jsx";
@@ -57,7 +56,7 @@ export default function ModelCreateMessage({ isOpen, setIsOpen }) {
                   <div className="text-[24px] font-bold">Add New Message</div>
                   <div>
                     <button onClick={() => setIsOpen(false)}>
-                      <Image src={close} className="mt-5" alt="close" />
+                      <img src={close} className="mt-5" alt="close" />
                     </button>
                   </div>
                 </div>

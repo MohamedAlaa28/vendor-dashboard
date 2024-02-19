@@ -1,47 +1,21 @@
-"use client";
 import { useRef, useState } from "react";
 import PopUp from "./components/ProductReviewsFilter";
-import Select from "../components/Select";
+import Select from "../../../public/components/Select";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
-import Link from "next/link";
-import Image from "next/image";
+import { products } from "../../../public/Data/productsDataOrders2";
+import { Link } from "react-router-dom";
 
 const productOptions = [
   { id: 1, name: "Alphabetical" },
   { id: 2, name: "Rate" },
   { id: 3, name: "Date" },
 ];
-export const products = [
-  {
-    id: "1",
-    product: "Polo Shirt",
-    rate: "5",
-    date: "23/5/2022-11:18 PM",
-    review:
-      "Great shirt! The size is perfect , The color is better than Great shirt! The size is perfect , The color is better than",
-    description:
-      "Lorem ipsum dolor sit amet,consectetur adipiscing elit.Vivamus aliquam elitaelementum commodo.Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.Praesent eujusto quis mi dapibus fermentum.In posuere sollicitudin imperdiet.",
-  },
-  {
-    id: "2",
-    product: "Polo Shirt",
-    rate: "3",
-    date: "25/5/2022-11:18 PM",
-    review:
-      "Great shirt! The size is perfect , The color is better than Great shirt! The size is perfect , The color is better than",
-    description:
-      "Lorem ipsum dolor sit amet,consectetur adipiscing elit.Vivamus aliquam elitaelementum commodo.Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.Praesent eujusto quis mi dapibus fermentum.In posuere sollicitudin imperdiet.",
-  },
-];
-
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
 export default function ProductReviews() {
   const [selected, setSelected] = useState(productOptions[0]);
-  const [checked, setChecked] = useState(false);
-  const [indeterminate, setIndeterminate] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState([]);
 
   const arrow = useRef();
@@ -166,7 +140,7 @@ export default function ProductReviews() {
                                 borderRadius: "6px",
                               }}
                             >
-                              <Image
+                              <img
                                 src="/images/Img - product 1@2x.png"
                                 width={42.5}
                                 height={42.5}
@@ -180,7 +154,7 @@ export default function ProductReviews() {
                         <td className="whitespace-nowrap px-10 py-4 text-sm text-[#707082]">
                           <div className="flex flex-row space-x-1">
                             <p>{product.rate}</p>
-                            <Image width={20} height={20} src="/images/golden star.svg" alt="golden star" />
+                            <img width={20} height={20} src="/images/golden star.svg" alt="golden star" />
                           </div>
                         </td>
                         <td className="whitespace-nowrap px-10 py-4 text-sm text-[#707082]">
@@ -200,7 +174,7 @@ export default function ProductReviews() {
                 </table>
               ) : (
                 <div className="lg:block relative flex-1 w-full bg-white px-[425px] py-24">
-                  <Image width={200} height={200} className="object-cover" src="/images/Reviews.svg" alt="" />
+                  <img width={200} height={200} className="object-cover" src="/images/Reviews.svg" alt="" />
                   <p className="ml-9 mt-5 text-[18px] w-full">
                     No reviews yet!
                   </p>

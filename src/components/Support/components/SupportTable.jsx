@@ -1,13 +1,14 @@
-import { useRef, useState, useEffect } from "react";
-import Link from "next/link";
+import { useRef, useState } from "react";
 import { Fragment } from "react";
 import { Menu, Transition } from "@headlessui/react";
 import MoreVertIcon from '@mui/icons-material/MoreVert';
+import { Link } from "react-router-dom";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
+// eslint-disable-next-line react/prop-types
 export default function SupportTable({ MessagesList }) {
   const checkbox = useRef();
   const [checked, setChecked] = useState(false);

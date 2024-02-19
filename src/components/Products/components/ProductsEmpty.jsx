@@ -1,10 +1,9 @@
-import Image from "next/image";
 import React from "react";
 
 const ProductsEmpty = () => {
   return (
     <div className="mt-6 w-full bg-white rounded-lg shadow-lg flex flex-col justify-center text-center py-20">
-      <Image
+      <img
         src={"/Products.svg"}
         width={200}
         height={150}
