@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+  font-family: "Urbanist";
+  font-style: normal;
+  font-weight: 500;
+  src: url("/fonts/Urbanist/Urbanist-VariableFont_wght.ttf");
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+* {
+  box-sizing: border-box;
+  font-family: "Urbanist", sans-serif;
+}
+.scroll-bar::-webkit-scrollbar {
+  width: 10px;
+}
+.scroll-bar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 5px;
+}
+.scroll-bar::-webkit-scrollbar-thumb {
+  background: #3d897a;
+  border-radius: 5px;
+}
+.quill > .ql-toolbar:first-child {
+  display: none !important;
+}
+.ql-editor {
+  min-height: 100px;
+}
