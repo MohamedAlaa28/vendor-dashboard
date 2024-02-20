@@ -13,41 +13,41 @@ import DesktopSideBar from './components/DesktopSideBar';
 
 
 export const navigation = [
-  { id: 1, name: "Dashboard", to: "/vendor-dashboard/", icon: DashboardOutlinedIcon, current: true },
+  { id: 1, name: "Dashboard", to: "/", icon: DashboardOutlinedIcon, current: true },
   {
     id: 2,
     name: "Products",
     icon: Inventory2OutlinedIcon,
     current: false,
     children: [
-      { id: 1, name: "Products", to: "/Products" },
-      { id: 2, name: "Product Bulk Upload", to: "/ProductBulkUpload" },
-      { id: 3, name: "Table", to: "/Table" },
+      { id: 1, name: "Products", to: "/products" },
+      { id: 2, name: "Product Bulk Upload", to: "/productBulkUpload" },
+      { id: 3, name: "Table", to: "/table" },
     ],
   },
-  { id: 3, name: "Orders", to: "/Orders", icon: ChecklistOutlinedIcon, current: false },
+  { id: 3, name: "Orders", to: "/orders", icon: ChecklistOutlinedIcon, current: false },
   {
     id: 4,
     name: "Product Reviews",
-    to: "/ProductReviews",
+    to: "/productReviews",
     icon: StarBorderIcon,
     current: false,
   },
   {
     id: 5,
     name: "Commission History",
-    to: "/CommissionHistory",
+    to: "/commissionHistory",
     icon: RestoreOutlinedIcon,
     current: false,
   },
   {
     id: 6,
     name: "Support",
-    to: "/Support",
+    to: "/support",
     icon: SupportAgentIcon,
     current: false,
   },
-  { id: 7, name: "Help", to: "/Help", icon: ContactSupportOutlinedIcon, current: false },
+  { id: 7, name: "Help", to: "/help", icon: ContactSupportOutlinedIcon, current: false },
 ];
 
 export const userNavigation = [
@@ -82,33 +82,31 @@ export default function Layout({ children }) {
   }
 
   return (
-    <>
-      <div className="mx-auto flex md:px-8 xl:px-0 w-full">
-        <div className="sticky top-0 z-10 flex-shrink-0 bg-[#F2F4F7] border-b border-gray-200 flex">
-          {isMobile ?
-            (
-              <MobileSideBar sidebarMobileOpen={sidebarMobileOpen} setSidebarMobileOpen={setSidebarMobileOpen} />
-            )
-            :
-            (
-              <DesktopSideBar sidebarDesktopOpen={sidebarDesktopOpen} setSidebarDesktopOpen={setSidebarDesktopOpen} />
-            )
-          }
-        </div>
+    <div className="mx-auto flex xl:px-0 w-full">
+      <div className="sticky top-0 z-10 flex-shrink-0 bg-[#F2F4F7] border-b border-gray-200 flex">
+        {isMobile ?
+          (
+            <MobileSideBar sidebarMobileOpen={sidebarMobileOpen} setSidebarMobileOpen={setSidebarMobileOpen} />
+          )
+          :
+          (
+            <DesktopSideBar sidebarDesktopOpen={sidebarDesktopOpen} setSidebarDesktopOpen={setSidebarDesktopOpen} />
+          )
+        }
+      </div>
 
-        {/* <div className=""> */}
-        <div className="mx-auto flex flex-col md:px-8 xl:px-0 w-full h-[100dvh] mb-auto">
+      <div className="bg-[#F2F4F7] h-full w-full px-4">
+
 
           <Header isMobile={isMobile} setSidebarMobileOpen={setSidebarMobileOpen} />
-          <main className="flex-1 h-full">
+          <main className="flex-1 h-full w-full">
 
-            <div className="px-4 min-h-screen sm:px-6 md:px-0 bg-[#F2F4F7] pb-6 min-h-[90dvh]">
+            <div className=" min-h-screen sm:px-6 md:px-0 bg-[#F2F4F7] py-6 h-full w-full">
               {children}
             </div>
           </main>
-        </div>
-        {/* </div> */}
+
       </div>
-    </>
+    </div>
   );
 }

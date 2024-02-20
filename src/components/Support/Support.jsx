@@ -28,7 +28,7 @@ export default function Support() {
       </div>
 
       <div className="flex flex-row flex-wrap justify-between">
-        <div className="mt-4 sm:mt-8  flex justify-between">
+        <div className="mt-4 sm:mt-8 flex justify-between">
           <div className="flex gap-2 items-center">
             <Select
               items={people}
@@ -38,7 +38,7 @@ export default function Support() {
           </div>
         </div>
 
-        <div className="flex m-auto sm:m-0 mt-3 ">
+        <div className="flex m-auto sm:m-0">
           <button
             onClick={() => setIsOpen(true)}
             type="button"

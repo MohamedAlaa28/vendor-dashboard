@@ -35,7 +35,7 @@ export default function SupportTable({ MessagesList }) {
                   <th scope="col" className="relative  pr-6 sm:w-16 sm:pr-8">
                     <input
                       type="checkbox"
-                      className="absolute left-4 top-1/2 -mt-2 h-4 w-4 rounded border-gray-300 text-[#3d897a] focus:ring-[#3d897a] sm:left-6"
+                      className="absolute left-4 top-1/2 -mt-2 h-4 w-4 rounded border-gray-300 accent-[#3D897A] sm:left-6"
                       ref={checkbox}
                       checked={checked}
                       onChange={toggleAll}
@@ -149,7 +149,7 @@ export default function SupportTable({ MessagesList }) {
                       )}
                       <input
                         type="checkbox"
-                        className="absolute left-4 top-1/2 -mt-2 h-4 w-4 rounded border-gray-300 text-[#3d897a] focus:ring-[#3d897a] sm:left-6"
+                        className="absolute left-4 top-1/2 -mt-2 h-4 w-4 rounded border-gray-300 accent-[#3D897A] sm:left-6"
                         value={Message.id}
                         checked={selectedMessages.includes(Message)}
                         onChange={(e) =>

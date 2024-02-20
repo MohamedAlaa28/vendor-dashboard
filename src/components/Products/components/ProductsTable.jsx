@@ -1,5 +1,6 @@
 import { useRef, useState, useEffect } from "react";
-
+import productImage from "../../../../public/images/Img - product 1@2x.png";
+// eslint-disable-next-line react/prop-types
 const ProductsTable = ({ ProductsData }) => {
   const checkbox = useRef();
   const [checked, setChecked] = useState(false);
@@ -28,22 +29,6 @@ const ProductsTable = ({ ProductsData }) => {
       <div className="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
         <div className="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
           <div className="relative overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg  px-10 py-4 bg-white">
-            {/* {selectedProduct.length > 0 && (
-              <div className="absolute top-1 left-1 flex items-center space-x-3 bg-white">
-                <button
-                  type="button"
-                  className="inline-flex items-center rounded border border-gray-300 bg-white px-2.5 py-1.5 text-xs font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-[#3d897a] focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-30"
-                >
-                  Bulk edit
-                </button>
-                <button
-                  type="button"
-                  className="inline-flex items-center rounded border border-gray-300 bg-white px-2.5 py-1.5 text-xs font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-[#3d897a] focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-30"
-                >
-                  Delete all
-                </button>
-              </div>
-            )} */}
             <table className="min-w-full divide-y-[2px]">
               <thead className="bg-white">
                 <tr>
@@ -53,7 +38,7 @@ const ProductsTable = ({ ProductsData }) => {
                   >
                     <input
                       type="checkbox"
-                      className="absolute left-4 top-1/2 -mt-2 h-4 w-4 rounded border-gray-300 text-[#3d897a] focus:ring-[#3d897a] sm:left-6"
+                      className="absolute left-4 top-1/2 -mt-2 h-4 w-4 rounded border-gray-300 accent-[#3D897A] sm:left-6"
                       ref={checkbox}
                       checked={checked}
                       onChange={toggleAll}
@@ -120,7 +105,7 @@ const ProductsTable = ({ ProductsData }) => {
                       )}
                       <input
                         type="checkbox"
-                        className="absolute left-4 top-1/2 -mt-2 h-4 w-4 rounded border-gray-300 text-[#3d897a] focus:ring-[#3d897a] sm:left-6"
+                        className="absolute left-4 top-1/2 -mt-2 h-4 w-4 rounded border-gray-300 accent-[#3D897A] sm:left-6"
                         value={product.email}
                         checked={selectedProduct.includes(product)}
                         onChange={(e) =>
@@ -139,7 +124,7 @@ const ProductsTable = ({ ProductsData }) => {
                             width={25}
                             height={25}
                             className="h-10 w-10 rounded-full object-cover "
-                            src={product.image}
+                            src={productImage}
                             alt=""
                           />
                         </div>
@@ -169,12 +154,6 @@ const ProductsTable = ({ ProductsData }) => {
                           ? "text-[#3D897A]  bg-[#3D897A] bg-opacity-25"
                           : "text-[#EE6363] bg-[#EE6363] bg-opacity-25"
                           } inline-flex rounded-full px-2 text-xs font-semibold leading-5 `}
-                      // className={classNames(
-                      //   product.Status ===
-                      //     ? "text-green-800  bg-green-100"
-                      //     : "text-[#c54949] bg-[#f38484]",
-                      //   "inline-flex rounded-full px-2 text-xs font-semibold leading-5 "
-                      // )}
                       >
                         {String(product.Status)}
                       </span>

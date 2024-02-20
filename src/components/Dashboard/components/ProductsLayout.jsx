@@ -22,27 +22,27 @@ export default function ProductsLayout() {
           <div className="   sm:rounded-lg mt-5  relative max-h-[450px] overflow-x-auto overflow-y-scroll scroll-bar">
             <table className="w-full text-sm text-left table-auto	 ">
               <thead className="sticky top-0 bg-white border-b ">
-                <tr className="text-xs     w-full ">
-                  <th scope="col" className="pr-6 py-3">
+                <tr className="text-xs w-full ">
+                  <th scope="col" className="pr-6 py-3 text-left text-sm text-[#686868]">
                     Product
                   </th>
-                  <th scope="col" className="px-6 py-3">
+                  <th scope="col" className="px-6 py-3 text-left text-sm text-[#686868]">
                     Category
                   </th>
-                  <th scope="col" className="px-6 py-3">
+                  <th scope="col" className="px-6 py-3 text-left text-sm text-[#686868]">
                     Sub-Category
                   </th>
-                  <th scope="col" className="px-6 py-3">
+                  <th scope="col" className="px-6 py-3 text-left text-sm text-[#686868]">
                     Quantity
                   </th>
 
-                  <th scope="col" className="px-6 py-3">
+                  <th scope="col" className="px-6 py-3 text-left text-sm text-[#686868]">
                     Unit Price
                   </th>
-                  <th scope="col" className="px-6 py-3">
+                  <th scope="col" className="px-6 py-3 text-left text-sm text-[#686868]">
                     State
                   </th>
-                  <th scope="col" className="pl-6 py-3">
+                  <th scope="col" className="pl-6 py-3 text-left text-sm text-[#686868]">
                     Date
                   </th>
                 </tr>

@@ -5,15 +5,15 @@ import { Disclosure } from "@headlessui/react";
 // eslint-disable-next-line react/prop-types
 const DesktopSideBar = ({ sidebarDesktopOpen, setSidebarDesktopOpen }) => {
     return (
-        <div className="md:flex md:flex-col md:fixed md:inset-y- pr-2 flex flex-col flex-grow bg-[#3D897A] overflow-hidden">
-            <div className="border-r border-gray-200 pt-5 flex flex-col flex-grow bg-[#3D897A] overflow-y-auto">
-                <div className={`flex ${!sidebarDesktopOpen && " flex-col-reverse"} justify-between`}>
+        <div className="border-r border-gray-200 md:flex md:flex-col md:inset-y- pr-2 flex flex-col flex-grow bg-[#3D897A] overflow-hidden">
+            <div className="pt-5 flex flex-col flex-grow bg-[#3D897A] overflow-y-auto">
+                <div className="flex justify-between">
                     <Link to="/" className="flex-shrink-0 pl-4 flex items-center cursor-pointer">
                         <img height={26} width={sidebarDesktopOpen ? 120 : 26} src={sidebarDesktopOpen ? "./images/logoLight.svg" : "./images/logoLight.png"} alt="mytreety" />
                     </Link>
                     <button
-                        className="flex-shrink-0 mt-2 flex items-center cursor-pointer hover:bg-[#d3eded54] rounded-md"
-                       // onClick={() => setSidebarDesktopOpen(!sidebarDesktopOpen)} // Toggle sidebar state
+                        className="flex-shrink-0 mt-2 p-1 flex items-center cursor-pointer hover:bg-[#d3eded54] rounded-md"
+                    //onClick={() => setSidebarDesktopOpen(!sidebarDesktopOpen)} // Toggle sidebar state
                     >
                         <img className="w-5" src="./images/Path 15540.svg" alt="close" />
                     </button>
@@ -27,10 +27,10 @@ const DesktopSideBar = ({ sidebarDesktopOpen, setSidebarDesktopOpen }) => {
                                         to={item.to}
                                         className={classNames(
                                             item.current ? "text-white hover:bg-[#d3eded54]" : "text-white hover:bg-[#d3eded54]",
-                                            "group w-full flex gap-2 items-center py-3 px-2  font-medium rounded-md"
+                                            "group w-full flex px-1 py-1 mx-1 my-1 gap-2  items-center font-medium rounded-md"
                                         )}
                                     >
-                                        <item.icon className={classNames(item.current ? "text-white" : "text-white", "text-lg mr-6 flex-shrink-0 ")} aria-hidden="true" />
+                                        <item.icon className={classNames(item.current ? "text-white" : "text-white", "text-lg flex-shrink-0 ")} aria-hidden="true" />
                                         {sidebarDesktopOpen && <p className="text-sm">{item.name}</p>}
                                     </NavLink>
                                 </div>
@@ -44,7 +44,7 @@ const DesktopSideBar = ({ sidebarDesktopOpen, setSidebarDesktopOpen }) => {
                                                     "group w-full flex justify-between items-center font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-[#3d897a]"
                                                 )}
                                             >
-                                                <div className="flex px-2 py-3 gap-2">
+                                                <div className="flex mx-2 my-2 gap-2 items-center">
                                                     <item.icon className={classNames(item.current ? "text-white" : "text-white", "text-lg flex-shrink-0")} aria-hidden="true" />
                                                     {sidebarDesktopOpen && <p className="text-sm">{item.name}</p>}
                                                 </div>
@@ -55,7 +55,7 @@ const DesktopSideBar = ({ sidebarDesktopOpen, setSidebarDesktopOpen }) => {
                                             <Disclosure.Panel className="space-y-1">
                                                 {item.children.map((subItem) => (
                                                     <NavLink key={subItem.id} to={subItem.to}
-                                                        className="cursor-pointer group w-full flex items-center py-2 pl-3 ml-9 text-sm font-medium text-white hover:text-gray-100 hover:bg-[#d3eded54]"
+                                                        className="cursor-pointer group w-full flex items-center rounded-md py-1 pl-10 text-sm font-medium text-white hover:text-gray-100 hover:bg-[#d3eded54]"
                                                     >
                                                         <Disclosure.Button key={subItem.id} as="span">
                                                             {subItem.name}

@@ -4,6 +4,8 @@ import Select from "../../../public/components/Select";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import { products } from "../../../public/Data/productsDataOrders2";
 import { Link } from "react-router-dom";
+import productImage from "../../../public/images/Img - product 1@2x.png";
+import starImage from "../../../public/images/golden star.svg";
 
 const productOptions = [
   { id: 1, name: "Alphabetical" },
@@ -83,7 +85,7 @@ export default function ProductReviews() {
       >
         <div className="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
           <div className="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
-            <div className="relative overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg px-10 py-4 bg-white">
+            <div className="relative overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg px-4 py-4 bg-white">
               {!isEmpty(products) ? (
                 <table className="min-w-full table-fixed divide-y-[2px]">
                   <thead className="mx-2">
@@ -96,19 +98,19 @@ export default function ProductReviews() {
                       </th>
                       <th
                         scope="col"
-                        className="px-10 py-3.5 text-left text-sm text-[#686868]"
+                        className="px-4 py-3.5 text-left text-sm text-[#686868]"
                       >
                         Rate
                       </th>
                       <th
                         scope="col"
-                        className="px-10 py-3.5 text-left text-sm text-[#686868]"
+                        className="px-4 py-3.5 text-left text-sm text-[#686868]"
                       >
                         Date
                       </th>
                       <th
                         scope="col"
-                        className="px-10 py-3.5 text-left text-sm text-[#686868]"
+                        className="px-4 py-3.5 text-left text-sm text-[#686868]"
                       >
                         Review
                       </th>
@@ -141,7 +143,7 @@ export default function ProductReviews() {
                               }}
                             >
                               <img
-                                src="/images/Img - product 1@2x.png"
+                                src={productImage}
                                 width={42.5}
                                 height={42.5}
                                 alt="product"
@@ -151,17 +153,17 @@ export default function ProductReviews() {
                             <p className="mt-3 pl-2">{product.product}</p>
                           </div>
                         </td>
-                        <td className="whitespace-nowrap px-10 py-4 text-sm text-[#707082]">
+                        <td className="whitespace-nowrap px-4 py-4 text-sm text-[#707082]">
                           <div className="flex flex-row space-x-1">
                             <p>{product.rate}</p>
-                            <img width={20} height={20} src="/images/golden star.svg" alt="golden star" />
+                            <img width={20} height={20} src={starImage} alt="golden star" />
                           </div>
                         </td>
-                        <td className="whitespace-nowrap px-10 py-4 text-sm text-[#707082]">
+                        <td className="whitespace-nowrap px-4 py-4 text-sm text-[#707082]">
                           {product.date}
                         </td>
-                        <td className="whitespace-nowrap px-10 py-4 text-sm text-[#707082]">
-                          <p className="truncate w-[400px]">{product.review}</p>
+                        <td className="whitespace-nowrap px-4 py-4 text-sm text-[#707082]">
+                          <p className="truncate w-[150px]">{product.review}</p>
                         </td>
                         <td className="whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
                           <Link href={`/ProductReviews/${product.id}`} className="text-[#3D897A] hover:text-[#3D897A] hover:underline">

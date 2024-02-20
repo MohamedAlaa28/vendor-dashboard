@@ -58,7 +58,7 @@ export default function Orders() {
                       >
                         <input
                           type="checkbox"
-                          className="absolute left-4 top-1/2 -mt-2 h-4 w-4 rounded border-[#3D897A] text-[#3D897A] focus:ring-[#3D897A] sm:left-6"
+                          className="absolute left-4 top-1/2 -mt-2 h-4 w-4 rounded accent-[#3D897A] sm:left-6"
                           ref={checkbox}
                           checked={checked}
                           onChange={toggleAll}
@@ -72,25 +72,25 @@ export default function Orders() {
                       </th>
                       <th
                         scope="col"
-                        className="px-12 py-3.5 text-left text-sm text-[#686868] w-28"
+                        className="px-1 py-3.5 text-left text-sm text-[#686868] w-28"
                       >
                         NO. of products
                       </th>
                       <th
                         scope="col"
-                        className="px-12 py-3.5 text-left text-sm text-[#686868]"
+                        className="px-1 py-3.5 text-left text-sm text-[#686868]"
                       >
                         Amount
                       </th>
                       <th
                         scope="col"
-                        className="px-12 py-3.5 text-left text-sm text-[#686868]"
+                        className="px-1 py-3.5 text-left text-sm text-[#686868]"
                       >
                         Tracking Info
                       </th>
                       <th
                         scope="col"
-                        className="px-12 py-3.5 text-left text-sm text-[#686868]"
+                        className="px-1 py-3.5 text-left text-sm text-[#686868]"
                       ></th>
                       <th
                         scope="col"
@@ -116,7 +116,7 @@ export default function Orders() {
                           )}
                           <input
                             type="checkbox"
-                            className="absolute left-4 top-1/2 -mt-2 h-4 w-4 rounded border-gray-300 text-[#3D897A] focus:ring-[#3D897A] sm:left-6"
+                            className="absolute left-4 top-1/2 -mt-2 h-4 w-4 rounded border-gray-300 accent-[#3D897A] sm:left-6"
                             value={product.email}
                             checked={selectedProduct.includes(product)}
                             onChange={(e) =>
@@ -133,16 +133,16 @@ export default function Orders() {
                             {product.code}
                           </Link>
                         </td>
-                        <td className="whitespace-nowrap px-12 py-4 text-sm text-[#707082]">
+                        <td className="whitespace-nowrap px-1 py-4 text-sm text-[#707082]">
                           {product.no}
                         </td>
-                        <td className="whitespace-nowrap px-12 py-4 text-sm text-[#707082]">
+                        <td className="whitespace-nowrap px-1 py-4 text-sm text-[#707082]">
                           {product.amount}
                         </td>
-                        <td className="whitespace-nowrap px-12 py-4 text-sm text-[#707082]">
+                        <td className="whitespace-nowrap px-1 py-4 text-sm text-[#707082]">
                           <OrdersPopUp />
                         </td>
-                        <td className="whitespace-nowrap px-12 py-4 text-sm text-[#707082]">
+                        <td className="whitespace-nowrap px-1 py-4 text-sm text-[#707082]">
                           <button className="border border-5 px-2 py-1 rounded-[8px]">
                             <SimCardDownloadOutlinedIcon className="w-5" />
                             Download Invoice

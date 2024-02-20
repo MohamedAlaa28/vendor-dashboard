@@ -33,13 +33,13 @@ export default function Products() {
         <div className="flex gap-2">
           <button
             type="button"
-            className="inline-flex max-w-xs items-center justify-center rounded-md border border-1 bg-gray-50 px-8 py-2 text-sm font-medium text-gray-900 shadow-sm  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#3d897a]"
+            className="inline-flex max-w-xs items-center justify-center rounded-md border border-1 bg-gray-50 md:px-6 lg:px-8 px-2 text-sm font-medium text-gray-900 shadow-sm  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#3d897a]"
           >
             Bulk Edit
           </button>
           <button
             type="button"
-            className="inline-flex max-w-xs items-center justify-center rounded-md border border-transparent bg-[#3d897a] px-8 py-2 text-sm font-medium text-white shadow-sm hover:bg-[#3d897a] focus:outline-none focus:ring-2 focus:ring-[#3d897a] focus:ring-offset-2"
+            className="inline-flex max-w-xs items-center justify-center rounded-md border border-transparent bg-[#3d897a] md:px-6 lg:px-8 px-2 text-sm font-medium text-white shadow-sm hover:bg-[#3d897a] focus:outline-none focus:ring-2 focus:ring-[#3d897a] focus:ring-offset-2"
           >
             + Add
           </button>

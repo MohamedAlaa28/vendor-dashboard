@@ -63,7 +63,7 @@ export default function CalendarInput() {
     <div className="flex items-center justify-center">
       <div className="antialiased sans-serif">
         <div className="container mx-auto">
-          <div className="mb-5 w-64">
+          <div className="mb-5">
             <div className="relative w-full">
               <input type="hidden" name="date" />
               <input
@@ -79,7 +79,7 @@ export default function CalendarInput() {
               </div>
 
               {showDatepicker && (
-                <div className="bg-white mt-12 rounded-lg shadow p-4 absolute top-0 left-0" style={{ width: "17rem" }}>
+                <div className="bg-white mt-12 rounded-lg shadow p-2 absolute top-0 left-0 z-10 ">
                   <div className="flex justify-between items-center mb-2">
                     <button type="button" onClick={decrement}>
                       {"<"}
@@ -91,22 +91,22 @@ export default function CalendarInput() {
                       {">"}
                     </button>
                   </div>
-                  <div className="flex flex-wrap mb-3">
+                  <div className="flex flex-wrap  mb-3">
                     {DAYS.map(day => (
-                      <div key={day} style={{ width: "14.28%" }} className="text-center">
+                      <div key={day} className="text-center p-1">
                         {day}
                       </div>
                     ))}
                   </div>
-                  <div className="flex flex-wrap">
+                  <div className="flex flex-wrap ">
                     {blankDays.map((_, i) => (
-                      <div key={i} style={{ width: "14.28%" }}></div>
+                      <div key={i} ></div>
                     ))}
                     {dayCount.map((day, index) => (
-                      <div key={index} style={{ width: "14.28%" }} className="text-center">
+                      <div key={index} className="text-center">
                         <div
                           onClick={() => setDateValue(day)}
-                          className={`cursor-pointer ${isToday(day) ? "text-blue-600" : "text-gray-700"}`}>
+                          className={`cursor-pointer p-1 ${isToday(day) ? "text-blue-600" : "text-gray-700"}`}>
                           {day}
                         </div>
                       </div>

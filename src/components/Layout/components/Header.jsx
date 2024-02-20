@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 // eslint-disable-next-line react/prop-types
 const Header = ({ isMobile, setSidebarMobileOpen }) => {
     return (
-        <div className="flex-1 flex justify-between px-4 md:px-0 w-[80%] bg-white">
+        <div className="flex-1 flex justify-between px-4 md:px-0 bg-[#F2F4F7] border-b border-gray-200">
             {isMobile &&
                 <button
                     type="button"
@@ -26,8 +26,8 @@ const Header = ({ isMobile, setSidebarMobileOpen }) => {
                     <label htmlFor="search-field" className="sr-only">
                         Search
                     </label>
-                    <div className="flex relative w-full text-gray-400 focus-within:text-gray-600">
-                        <div className="pointer-events-none inset-y-0 left-0 flex items-center">
+                    <div className="relative w-full text-gray-400 focus-within:text-gray-600">
+                        <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center">
                             <SearchOutlinedIcon className="h-5 w-8" aria-hidden="true" />
                         </div>
                         <input
@@ -50,7 +50,7 @@ const Header = ({ isMobile, setSidebarMobileOpen }) => {
                 </button>
 
                 {/* Profile dropdown */}
-                <Menu as="div" className="mt-2">
+                <Menu as="div" className="mt-2 z-10">
                     <div>
                         <Menu.Button className="rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#3d897a]">
                             <span className="sr-only">Open user menu</span>

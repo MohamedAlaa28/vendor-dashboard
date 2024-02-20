@@ -1,4 +1,4 @@
-import { Fragment, useState } from "react";
+import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import ExpandMoreOutlinedIcon from '@mui/icons-material/ExpandMoreOutlined';
 
@@ -19,12 +19,7 @@ const filters = [
   },
 ];
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
-
 export default function OrdersDropDown() {
-  const [open, setOpen] = useState(false);
 
   return (
     <div
@@ -34,7 +29,7 @@ export default function OrdersDropDown() {
       <div className="max-w-3xl mx-auto px-2 text-center sm:px-6 lg:max-w-7xl lg:px-4">
         <section aria-labelledby="filter-heading" className="py-1">
           <div className="flex items-center justify-between">
-            <Popover.Group className="hidden sm:flex sm:items-baseline sm:space-x-8">
+            <Popover.Group className="sm:flex sm:items-baseline sm:space-x-8">
               {filters.map((section) => (
                 <Popover
                   as="div"
@@ -61,7 +56,7 @@ export default function OrdersDropDown() {
                       </div>
                       <span>{section.name}</span>
                       <ExpandMoreOutlinedIcon
-                        className="flex-shrink-0 -mr-1 ml-1 h-5 w-5 text-[#686868] group-hover:text-[#686868] ml-28"
+                        className="flex-shrink-0 -mr-1 ml-1 h-5 w-5 text-[#686868] group-hover:text-[#686868]"
                         aria-hidden="true"
                       />
                     </Popover.Button>
@@ -91,11 +86,11 @@ export default function OrdersDropDown() {
                               name={`${section.id}[]`}
                               defaultValue={option.value}
                               type="checkbox"
-                              className="h-4 w-4 border-gray-300 rounded text-[#3D897A] focus:ring-[#3D897A]"
+                              className="h-4 w-4 border-gray-300 rounded accent-[#3D897A]"
                             />
                             <label
                               htmlFor={`filter-${section.id}-${optionIdx}`}
-                              className="ml-3 pr-6 text-sm font-medium text-[#686868] whitespace-nowrap"
+                              className="ml-3 pr-6 text-sm font-medium text-[#686868] whitespace-nowrap accent-[#3D897A]"
                             >
                               {option.label}
                             </label>
@@ -112,7 +107,7 @@ export default function OrdersDropDown() {
                               name={`${section.id}[]`}
                               defaultValue={option.value}
                               type="radio"
-                              className="h-4 w-4 border-gray-300 rounded-[50%] text-[#3D897A] focus:ring-[#3D897A]"
+                              className="h-4 w-4 border-gray-300 rounded-[50%] accent-[#3D897A]"
                             />
                             <label
                               htmlFor={`filter-${section.id}-${optionIdx}`}

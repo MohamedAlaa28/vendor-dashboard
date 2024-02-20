@@ -1,5 +1,5 @@
 
-import { Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout/Layout';
 import Dashboard from './components/Dashboard/Dashboard';
 // Import other components as necessary
@@ -15,21 +15,23 @@ import './App.css';
 
 function App() {
   return (
-    <div id="top" className='container'>
-      <Layout>
-        <Routes>
-          <Route path="/vendor-dashboard" element={<Dashboard />} />
-          <Route path="/commissionHistory" element={<CommissionHistory />} />
-          <Route path="/help" element={<Help />} />
-          <Route path="/orders" element={<Orders />} />
-          <Route path="/productBulkUpload" element={<ProductBulkUpload />} />
-          <Route path="/productReviews" element={<ProductReviews />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/support" element={<Support />} />
-          <Route path="/table" element={<Table />} />
-        </Routes>
-      </Layout>
-    </div>
+    <HashRouter>
+      <div id="top">
+        <Layout>
+          <Routes>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/commissionHistory" element={<CommissionHistory />} />
+            <Route path="/help" element={<Help />} />
+            <Route path="/orders" element={<Orders />} />
+            <Route path="/productBulkUpload" element={<ProductBulkUpload />} />
+            <Route path="/productReviews" element={<ProductReviews />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/support" element={<Support />} />
+            <Route path="/table" element={<Table />} />
+          </Routes>
+        </Layout>
+      </div>
+    </HashRouter>
   );
 }
 

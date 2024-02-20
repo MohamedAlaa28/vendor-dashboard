@@ -2,7 +2,7 @@ import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
 import CalendarInput from "../../../../public/components/CalendarInput";
-
+import starImage from "../../../../public/images/golden star.svg";
 
 export default function ProductReviewsFilter() {
   const [open, setOpen] = useState(false);
@@ -68,8 +68,8 @@ export default function ProductReviewsFilter() {
                       <CloseOutlinedIcon className="h-6 w-6" aria-hidden="true" />
                     </button>
                   </div>
-                  <div className="sm:flex sm:items-start">
-                    <div className="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left min-h-[375px] h-auto">
+                  <div className="sm:flex sm:items-start p-4">
+                    <div className="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left  h-auto">
                       <Dialog.Title
                         as="h3"
                         className="text-lg leading-6 font-medium text-gray-900 border-b-[2px]"
@@ -77,34 +77,27 @@ export default function ProductReviewsFilter() {
                         <h1 className="text-[24px] mb-5">Filter</h1>
                       </Dialog.Title>
 
-                      <div className="py-3 w-[750px] content-center">
-                        <h1 className="text-[16px] mt-3 ">Date Range</h1>
-                        <div className="flex row">
-                          <div className="w-full pr-5 mb-6 md:mb-0 my-5 flex row relative">
-                            <label
-                              className="block tracking-wide text-[#707082] text-[16px] mr-2 mt-3 "
-                              htmlFor="tracking-id"
-                            >
-                              from
-                            </label>
+                      <div className="py-3 content-center">
+                        <h1 className="text-[16px] my-3">Date Range</h1>
+                        <div className="flex flex-col sm:flex-row w-auto gap-3">
+                          {/* Date input From */}
+                          <div className="w-full lg:my-5 flex flex-col sm:flex-row relative">
+                            <label className="block tracking-wide text-[#707082] text-[16px] mr-2 mt-3" htmlFor="tracking-id">from</label>
                             <CalendarInput />
                           </div>
-                          <div className="w-full mb-6 md:mb-0 my-5 ml-10 flex row relative">
-                            <label
-                              className="block tracking-wide text-[#707082] text-[16px] mr-2 mt-3"
-                              htmlFor="tracking-carrier"
-                            >
-                              to
-                            </label>
+                          {/* Date input To */}
+                          <div className="w-full lg:my-5 flex flex-col sm:flex-row relative">
+                            <label className="block tracking-wide text-[#707082] text-[16px] mr-2 md:mt-3" htmlFor="tracking-carrier">to</label>
                             <CalendarInput />
                           </div>
                         </div>
+
                         <div>
-                          <h1 className="my-5 text-[16px]">Rate</h1>
-                          <div className="flex row gap-10">
+                          <h1 className="mb-5 text-[16px]">Rate</h1>
+                          <div className="flex flex-wrap gap-2 sm:gap-10">
                             <div className="form-check form-check-inline">
                               <input
-                                className="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white text-[#3D897A] checked:bg-[#3D897A] checked:border-[#3D897A] focus:outline-none focus:ring-[#3D897A] transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                                className="form-check-input h-4 w-4 border border-gray-300 rounded-sm bg-white accent-[#3D897A] transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
                                 type="checkbox"
                                 id="inlineCheckbox1"
                                 value="option1"
@@ -118,7 +111,7 @@ export default function ProductReviewsFilter() {
                                   <img
                                     width={20}
                                     height={20}
-                                    src="/images/golden star.svg"
+                                    src={starImage}
                                     alt="golden star"
                                   />
                                 </div>
@@ -126,7 +119,7 @@ export default function ProductReviewsFilter() {
                             </div>
                             <div className="form-check form-check-inline">
                               <input
-                                className="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white text-[#3D897A] checked:bg-[#3D897A] checked:border-[#3D897A] focus:outline-none focus:ring-[#3D897A] transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                                className="form-check-input h-4 w-4 border border-gray-300 rounded-sm bg-white accent-[#3D897A] transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
                                 type="checkbox"
                                 id="inlineCheckbox2"
                                 value="option2"
@@ -140,7 +133,7 @@ export default function ProductReviewsFilter() {
                                   <img
                                     width={20}
                                     height={20}
-                                    src="/images/golden star.svg"
+                                    src={starImage}
                                     alt="golden star"
                                   />
                                 </div>
@@ -148,7 +141,7 @@ export default function ProductReviewsFilter() {
                             </div>
                             <div className="form-check form-check-inline">
                               <input
-                                className="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white text-[#3D897A] checked:bg-[#3D897A] checked:border-[#3D897A] focus:outline-none focus:ring-[#3D897A] transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                                className="form-check-input h-4 w-4 border border-gray-300 rounded-sm bg-white accent-[#3D897A] transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
                                 type="checkbox"
                                 id="inlineCheckbox2"
                                 value="option2"
@@ -162,7 +155,7 @@ export default function ProductReviewsFilter() {
                                   <img
                                     width={20}
                                     height={20}
-                                    src="/images/golden star.svg"
+                                    src={starImage}
                                     alt="golden star"
                                   />
                                 </div>
@@ -170,7 +163,7 @@ export default function ProductReviewsFilter() {
                             </div>
                             <div className="form-check form-check-inline">
                               <input
-                                className="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white text-[#3D897A] checked:bg-[#3D897A] checked:border-[#3D897A] focus:outline-none focus:ring-[#3D897A] transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                                className="form-check-input h-4 w-4 border border-gray-300 rounded-sm bg-white accent-[#3D897A] transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
                                 type="checkbox"
                                 id="inlineCheckbox2"
                                 value="option2"
@@ -184,7 +177,7 @@ export default function ProductReviewsFilter() {
                                   <img
                                     width={20}
                                     height={20}
-                                    src="/images/golden star.svg"
+                                    src={starImage}
                                     alt="golden star"
                                   />
                                 </div>
@@ -192,7 +185,7 @@ export default function ProductReviewsFilter() {
                             </div>
                             <div className="form-check form-check-inline">
                               <input
-                                className="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white text-[#3D897A] checked:bg-[#3D897A] checked:border-[#3D897A] focus:outline-none focus:ring-[#3D897A] transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                                className="form-check-input h-4 w-4 border border-gray-300 rounded-sm bg-white accent-[#3D897A] transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
                                 type="checkbox"
                                 id="inlineCheckbox2"
                                 value="option2"
@@ -206,7 +199,7 @@ export default function ProductReviewsFilter() {
                                   <img
                                     width={20}
                                     height={20}
-                                    src="/images/golden star.svg"
+                                    src={starImage}
                                     alt="golden star"
                                   />
                                 </div>
@@ -217,17 +210,17 @@ export default function ProductReviewsFilter() {
                       </div>
                     </div>
                   </div>
-                  <div className="mt-5 sm:mt-4 sm:flex sm:flex-row-reverse">
+                  <div className="sm:flex sm:flex-row-reverse items-center p-4 pb-0">
                     <button
                       type="button"
-                      className="w-1/4 focus:outline-none text-white bg-[#3D897A] hover:opacity-[90%] font-medium rounded-[10px] text-sm px-5 py-3 mr-2 mb-2 dark:bg-[#3D897A] dark:hover:bg-[#3D897A] dark:focus:ring-[#3D897A]"
+                      className=" focus:outline-none text-white bg-[#3D897A] hover:opacity-[90%] font-medium rounded-[10px] text-sm px-8 py-3 mr-2 mb-2 dark:bg-[#3D897A] dark:hover:bg-[#3D897A] dark:focus:ring-[#3D897A]"
                       onClick={() => setOpen(false)}
                     >
                       Apply
                     </button>
                     <button
                       type="button"
-                      className="w-1/4 focus:outline-none text-[#232323] bg-white hover:opacity-[90%] font-medium rounded-[10px] text-sm px-5 py-3 mr-2 mb-2 dark:bg-white dark:hover:bg-white dark:focus:ring-white"
+                      className="border border-[#3D897A] focus:outline-none text-[#232323] bg-white hover:opacity-[90%] font-medium rounded-[10px] text-sm px-8 py-3 mr-2 mb-2 dark:bg-white dark:hover:bg-white dark:focus:ring-white"
                       onClick={() => setOpen(false)}
                     >
                       Reset

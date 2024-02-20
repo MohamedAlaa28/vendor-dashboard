@@ -77,55 +77,49 @@ export default function CommissionHistoryFilter() {
                         <h1 className="text-[24px] mb-5">Filter</h1>
                       </Dialog.Title>
 
-                      <div className="py-3 w-[750px] content-center h-[450px]">
-                        <h1 className="text-[16px] mt-3">Commission Range</h1>
-                        <div className="flex row">
-                          <div className="w-full md:w-1/2 mb-6 md:mb-0 my-5 flex row relative pr-2">
+                      <div className="py-3 content-center">
+                        <h1 className="text-[16px] my-3">Commission Range</h1>
+                        <div className="flex row gap-4 items-center sm:flex-row flex-col">
+                          <div className="mb-6 md:mb-0 flex row pr-2">
                             <label
-                              className="block tracking-wide text-[#707082] text-[16px] mr-2 mt-3 w-[30px]"
+                              className="block tracking-wide text-[#707082] text-[16px] mr-2 mt-3"
                               htmlFor="tracking-id"
                             >
                               min
                             </label>
-                            <div>
-                              <div className="border-l-[1px] border-[#D4D4D4] absolute text-[#707082] left-[270px] h-[45px]"></div>
-                              <div className=" absolute text-[#707082] left-[300px] top-3 h-9">
-                                EUR
-                              </div>
-                            </div>
                             <input
-                              className="appearance-none block w-full bg-[#F9F9F9] text-[#232323]border border-[#D4D4D4] rounded-[10px] py-3 px-4 mb-3 ml-1 leading-tight focus:outline-none focus:bg-white focus:border-[#D4D4D4] focus:ring-[#3D897A]"
+                              className="block w-full bg-[#F9F9F9] text-[#232323]border border-[#D4D4D4] rounded-[10px] py-3 px-4 mb-3 ml-1 leading-tight focus:outline-none focus:bg-white focus:border-[#D4D4D4] focus:ring-[#3D897A]"
                               maxLength="20"
                               id="tracking-id"
                               type="text"
                               placeholder="0"
                             />
+                            {/* <div className="text-[#707082]">
+                              EUR
+                            </div> */}
                           </div>
-                          <div className="w-full md:w-1/2 mb-6 md:mb-0 my-5 flex row relative pl-2">
+                          <div className="mb-6 md:mb-0 flex row pr-2">
                             <label
-                              className="block tracking-wide text-[#707082] text-[16px] mr-2 mt-3 w-[30px]"
+                              className="block tracking-wide text-[#707082] text-[16px] mr-2 mt-3"
                               htmlFor="tracking2-id"
                             >
                               max
                             </label>
-                            <div>
-                              <div className="border-l-[1px] border-[#D4D4D4] absolute text-[#707082] left-[295px] h-[45px]"></div>
-                              <div className=" absolute text-[#707082] left-[325px] top-3 h-9">
-                                EUR
-                              </div>
-                            </div>
                             <input
-                              className="appearance-none block w-full bg-[#F9F9F9] text-[#232323]border border-[#D4D4D4] rounded-[10px] py-3 px-4 mb-3 ml-1 leading-tight focus:outline-none focus:bg-white focus:border-[#D4D4D4] focus:ring-[#3D897A]"
+                              className="block w-full bg-[#F9F9F9] text-[#232323]border border-[#D4D4D4] rounded-[10px] py-3 px-4 mb-3 ml-1 leading-tight focus:outline-none focus:bg-white focus:border-[#D4D4D4] focus:ring-[#3D897A]"
                               maxLength="20"
                               id="tracking2-id"
                               type="text"
                               placeholder="0"
                             />
+                            {/* <div className="text-[#707082] ">
+                              EUR
+                            </div> */}
                           </div>
                         </div>
-                        <h1 className="text-[16px] mt-5">Date Range</h1>
-                        <div className="flex row">
-                          <div className="w-full md:w-1/2 pr-5 mb-6 md:mb-0 my-5 flex row relative">
+                        <h1 className="text-[16px] my-3">Date Range</h1>
+                        <div className="flex sm:flex-row flex-col">
+                          <div className="w-full md:w-1/2 mb-6 md:mb-0  flex row relative">
                             <label
                               className="block tracking-wide text-[#707082] text-[16px] mr-2 mt-3 "
                               htmlFor="tracking3-id"
@@ -134,7 +128,7 @@ export default function CommissionHistoryFilter() {
                             </label>
                             <CalendarInput />
                           </div>
-                          <div className="w-full md:w-1/2 mb-6 md:mb-0 my-5 flex row relative pl-4">
+                          <div className="w-full md:w-1/2 mb-6 md:mb-0  flex row relative pl-2 md:pl-4">
                             <label
                               className="block tracking-wide text-[#707082] text-[16px] mr-5 mt-3"
                               htmlFor="tracking4-id"
@@ -145,11 +139,11 @@ export default function CommissionHistoryFilter() {
                           </div>
                         </div>
                         <div>
-                          <h1 className="my-1 text-[16px]">Payment Status</h1>
+                          <h1 className="my-3 text-[16px]">Payment Status</h1>
                           <div className="flex row">
                             <div className="form-check pr-10">
                               <input
-                                className="form-check-input text-[#3D897A] appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-[#3D897A] checked:border-[#3D897A] focus:outline-none focus:ring-[#3D897A] transition  mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                                className="form-check-input accent-[#3D897A] rounded-full  w-4 border border-gray-300 bg-white checked:bg-[#3D897A] checked:border-[#3D897A] focus:outline-none focus:ring-[#3D897A] transition  mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
                                 type="radio"
                                 name="flexRadioDefault"
                                 id="flexRadioDefault1"
@@ -163,7 +157,7 @@ export default function CommissionHistoryFilter() {
                             </div>
                             <div className="form-check">
                               <input
-                                className="form-check-input text-[#3D897A] appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-[#3D897A] checked:border-[#3D897A] focus:outline-none focus:ring-[#3D897A] transition  mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                                className="form-check-input accent-[#3D897A] rounded-full  w-4 border border-gray-300 bg-white checked:bg-[#3D897A] checked:border-[#3D897A] focus:outline-none focus:ring-[#3D897A] transition  mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
                                 type="radio"
                                 name="flexRadioDefault"
                                 id="flexRadioDefault2"
@@ -183,14 +177,14 @@ export default function CommissionHistoryFilter() {
                   <div className="mt-5 sm:mt-4 sm:flex sm:flex-row-reverse">
                     <button
                       type="button"
-                      className="w-1/4 focus:outline-none text-white bg-[#3D897A] hover:opacity-[90%] font-medium rounded-[10px] text-sm px-5 py-3 mr-2 mb-2 dark:bg-[#3D897A] dark:hover:bg-[#3D897A] dark:focus:ring-[#3D897A]"
+                      className="focus:outline-none text-white bg-[#3D897A] hover:opacity-[90%] font-medium rounded-[10px] text-sm px-8 py-3 mr-2 mb-2 dark:bg-[#3D897A] dark:hover:bg-[#3D897A] dark:focus:ring-[#3D897A]"
                       onClick={() => setOpen(false)}
                     >
                       Apply
                     </button>
                     <button
                       type="button"
-                      className="w-1/4 focus:outline-none text-[#232323] bg-white hover:opacity-[90%] font-medium rounded-[10px] text-sm px-5 py-3 mr-2 mb-2 dark:bg-white dark:hover:bg-white dark:focus:ring-white"
+                      className="border border-[#3D897A] focus:outline-none text-[#232323] bg-white hover:opacity-[90%] font-medium rounded-[10px] text-sm px-8 py-3 mr-2 mb-2 dark:bg-white dark:hover:bg-white dark:focus:ring-white"
                       onClick={() => setOpen(false)}
                     >
                       Reset

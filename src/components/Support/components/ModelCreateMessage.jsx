@@ -8,6 +8,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
+// eslint-disable-next-line react/prop-types
 export default function ModelCreateMessage({ isOpen, setIsOpen }) {
   const cancelButtonRef = useRef(null);
   const { imageUrl, setImageUrl } = useState({});
@@ -51,7 +52,7 @@ export default function ModelCreateMessage({ isOpen, setIsOpen }) {
               leaveFrom="opacity-100 translate-y-0 sm:scale-100"
               leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
             >
-              <Dialog.Panel className="relative flex flex-col md:w-[600px] md:min-h-[580px] h-auto bg-white rounded-lg drop-shadow-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-6 sm:max-w-lg sm:w-full px-5">
+              <Dialog.Panel className="relative flex flex-col  h-auto bg-white rounded-lg drop-shadow-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-6 sm:max-w-lg sm:w-full px-5">
                 <div className="flex flex-row justify-between border-b py-3 w-full content-center">
                   <div className="text-[24px] font-bold">Add New Message</div>
                   <div>
@@ -72,7 +73,7 @@ export default function ModelCreateMessage({ isOpen, setIsOpen }) {
                       <Menu as="div" className="relative inline-block text-left">
                         <div>
                           <Menu.Button
-                            className="inline-flex justify-between w-full rounded-[10px] border border-[#CDCFDC] shadow-sm px-4 py-2 bg-[#F9F9F9] text-[12px] text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-[#3d897a]"
+                            className="inline-flex justify-between w-full rounded-[10px] border border-[#CDCFDC] shadow-sm px-4 py-2 bg-[#F9F9F9] text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-[#3d897a]"
                             onClick={() => setOpenMenu(true)}
                           >
                             {selectedSubject}
@@ -168,13 +169,12 @@ export default function ModelCreateMessage({ isOpen, setIsOpen }) {
                       {/* the end of dropdown */}
                     </div>
 
-                    <div className="Message-body flex flex-col w-full text-left py-3">
+                    {/* <div className="Message-body flex flex-col w-full text-left py-3">
                       <span className="block text-[14px] font-medium text-[#707082] pb-3">
                         Message
                       </span>
                       <Editor placeholder={"Write something..."} />
-                      {/* the end of Message body */}
-                    </div>
+                    </div> */}
 
                     <div className="Message-body flex flex-col w-full text-left py-3 ">
                       <span className="block text-[14px] font-medium text-[#707082] pb-3">
@@ -194,20 +194,15 @@ export default function ModelCreateMessage({ isOpen, setIsOpen }) {
                     </div>
                   </div>
                 </form>
-                <div className="px-4 py-3 pb-5 sm:px-5 w-full sm:flex sm:flex-row-reverse mt-auto">
+                <div className="sm:flex sm:flex-row-reverse items-center p-4 pb-0">
                   <button
                     type="button"
-                    className="inline-flex justify-center rounded-[10px] border border-transparent shadow-sm w-[142px] py-2 bg-[#3D897A] text-base font-medium text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#3d897a] sm:ml-3 sm:text-sm"
-                    onClick={() => setIsOpen(false)}
-                  >
+                    className=" focus:outline-none text-white bg-[#3D897A] hover:opacity-[90%] font-medium rounded-[10px] text-sm px-8 py-3 mr-2 mb-2 dark:bg-[#3D897A] dark:hover:bg-[#3D897A] dark:focus:ring-[#3D897A]">
                     Submit
                   </button>
                   <button
                     type="button"
-                    className="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#3d897a] sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
-                    onClick={() => setIsOpen(false)}
-                    ref={cancelButtonRef}
-                  >
+                    className="border border-[#3D897A] focus:outline-none text-[#232323] bg-white hover:opacity-[90%] font-medium rounded-[10px] text-sm px-8 py-3 mr-2 mb-2 dark:bg-white dark:hover:bg-white dark:focus:ring-white">
                     Cancel
                   </button>
                 </div>
