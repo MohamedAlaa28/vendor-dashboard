@@ -1,8 +1,8 @@
 const UploadFiles = () => {
   return (
     <>
-      <div className="flex flex-col md:flex-row gap-3">
-        <div className="bg-white shadow-md p-8 rounded-2xl max-w-sm w-1/2">
+      <div className="flex flex-col md:flex-row gap-3 mt-3">
+        <div className="bg-white shadow-md p-8 rounded-2xl max-w-sm">
           <div className="border-b pb-4 border-gray-300 flex justify-between">
             <h3 className="text-lg font-medium">Upload CSV Files</h3>
 
@@ -47,7 +47,7 @@ const UploadFiles = () => {
             </p>
           </div>
         </div>
-        <div className="bg-white shadow-md p-8 rounded-2xl max-w-sm w-1/2">
+        <div className="bg-white shadow-md p-8 rounded-2xl max-w-sm">
           <div className="border-b outline-offset-4 pb-4 border-gray-300">
             <h3 className="text-lg font-medium">Instructions</h3>
           </div>
@@ -57,7 +57,7 @@ const UploadFiles = () => {
         </div>
       </div>
       <div className="flex flex-col md:flex-row gap-3 mt-3">
-        <div className="bg-white shadow-md p-8 rounded-2xl max-w-sm w-1/2">
+        <div className="bg-white shadow-md p-8 rounded-2xl max-w-sm">
           <div className="border-b pb-4 border-gray-300 flex justify-between">
             <h3 className="text-lg font-medium">Upload XML Files</h3>
 
@@ -102,7 +102,7 @@ const UploadFiles = () => {
             </p>
           </div>
         </div>
-        <div className="bg-white shadow-md p-8 rounded-2xl max-w-sm w-1/2">
+        <div className="bg-white shadow-md p-8 rounded-2xl max-w-sm">
           <div className="border-b outline-offset-4 pb-4 border-gray-300">
             <h3 className="text-lg font-medium">Instructions</h3>
           </div>

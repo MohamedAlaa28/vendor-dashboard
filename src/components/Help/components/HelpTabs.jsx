@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Tab } from "@headlessui/react";
 import FAQ from "./FAQ";
 function classNames(...classes) {
@@ -43,7 +42,9 @@ export default function HelpTabs() {
               "rounded-xl bg-white",
               "ring-white ring-opacity-60 ring-offset-2 ring-offset-[#3D897A] focus:outline-none focus:ring-2"
             )}
-          ></Tab.Panel>
+          >
+            <FAQ />
+          </Tab.Panel>
           <Tab.Panel
             className={classNames(
               "rounded-xl bg-white",

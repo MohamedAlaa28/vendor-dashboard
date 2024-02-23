@@ -23,23 +23,23 @@ export default function Products() {
         </div>
       </div>
       <div className="mt-4 sm:mt-8 flex justify-between">
-        <div className="flex gap-2 items-center">
+        <div className="flex gap-1 items-center">
           <Select
             items={productOptions}
             selected={selected}
             setSelected={setSelected}
           />
         </div>
-        <div className="flex gap-2">
+        <div className="flex gap-1">
           <button
             type="button"
-            className="inline-flex max-w-xs items-center justify-center rounded-md border border-1 bg-gray-50 md:px-6 lg:px-8 px-2 text-sm font-medium text-gray-900 shadow-sm  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#3d897a]"
+            className="inline-flex items-center justify-center rounded-md border border-1 h-10 mt-1 bg-gray-50 py-0 md:px-6 lg:px-8 px-2 text-sm font-medium text-gray-900 shadow-sm  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#3d897a]"
           >
             Bulk Edit
           </button>
           <button
             type="button"
-            className="inline-flex max-w-xs items-center justify-center rounded-md border border-transparent bg-[#3d897a] md:px-6 lg:px-8 px-2 text-sm font-medium text-white shadow-sm hover:bg-[#3d897a] focus:outline-none focus:ring-2 focus:ring-[#3d897a] focus:ring-offset-2"
+            className="inline-flex items-center justify-center rounded-md border border-transparent h-10 mt-1 bg-[#3d897a] py-0 md:px-6 lg:px-8 px-2 text-sm font-medium text-white shadow-sm hover:bg-[#3d897a] focus:outline-none focus:ring-2 focus:ring-[#3d897a] focus:ring-offset-2"
           >
             + Add
           </button>

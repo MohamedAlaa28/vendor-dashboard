@@ -5,6 +5,8 @@ import ChecklistOutlinedIcon from '@mui/icons-material/ChecklistOutlined';
 import RestoreOutlinedIcon from '@mui/icons-material/RestoreOutlined';
 import DashboardOutlinedIcon from '@mui/icons-material/DashboardOutlined';
 import ContactSupportOutlinedIcon from '@mui/icons-material/ContactSupportOutlined';
+// import ReceiptOutlinedIcon from "@mui/icons-material/ReceiptOutlined";
+// import SupportAgentOutlinedIcon from "@mui/icons-material/SupportAgentOutlined";
 import Header from "./components/Header";
 import { useEffect, useState } from 'react';
 import MobileSideBar from './components/MobileSideBar';
@@ -22,7 +24,7 @@ export const navigation = [
     children: [
       { id: 1, name: "Products", to: "/products" },
       { id: 2, name: "Product Bulk Upload", to: "/productBulkUpload" },
-      { id: 3, name: "Table", to: "/table" },
+      // { id: 3, name: "Table", to: "/table" },
     ],
   },
   { id: 3, name: "Orders", to: "/orders", icon: ChecklistOutlinedIcon, current: false },
@@ -40,14 +42,21 @@ export const navigation = [
     icon: RestoreOutlinedIcon,
     current: false,
   },
+  // {
+  //   id: 6,
+  //   name: "Invoice",
+  //   to: "/invoice",
+  //   icon: ReceiptOutlinedIcon,
+  //   current: false,
+  // },
   {
-    id: 6,
+    id: 7,
     name: "Support",
     to: "/support",
     icon: SupportAgentIcon,
     current: false,
   },
-  { id: 7, name: "Help", to: "/help", icon: ContactSupportOutlinedIcon, current: false },
+  { id: 8, name: "Help", to: "/help", icon: ContactSupportOutlinedIcon, current: false },
 ];
 
 export const userNavigation = [
@@ -98,13 +107,13 @@ export default function Layout({ children }) {
       <div className="bg-[#F2F4F7] h-full w-full px-4">
 
 
-          <Header isMobile={isMobile} setSidebarMobileOpen={setSidebarMobileOpen} />
-          <main className="flex-1 h-full w-full">
+        <Header isMobile={isMobile} setSidebarMobileOpen={setSidebarMobileOpen} />
+        <main className="flex-1 h-full w-full">
 
-            <div className=" min-h-screen sm:px-6 md:px-0 bg-[#F2F4F7] py-6 h-full w-full">
-              {children}
-            </div>
-          </main>
+          <div className=" min-h-screen sm:px-6 md:px-0 bg-[#F2F4F7] py-6 h-full w-full">
+            {children}
+          </div>
+        </main>
 
       </div>
     </div>

@@ -12,6 +12,7 @@ import Products from './components/Products/Products';
 import Support from './components/Support/Support';
 import Table from './components/Table/Table';
 import './App.css';
+import Invoice from './components/Invoice/invoice';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
             <Route path="/products" element={<Products />} />
             <Route path="/support" element={<Support />} />
             <Route path="/table" element={<Table />} />
+            <Route path="/invoice" element={<Invoice />} />
           </Routes>
         </Layout>
       </div>
