@@ -8,8 +8,9 @@ const DesktopSideBar = ({ sidebarDesktopOpen, setSidebarDesktopOpen }) => {
         <div className="border-r border-gray-200 md:flex md:flex-col md:inset-y- pr-2 flex flex-col flex-grow bg-[#3D897A] overflow-hidden">
             <div className="pt-5 flex flex-col flex-grow bg-[#3D897A] overflow-y-auto">
                 <div className="flex justify-between">
-                    <Link to="/" className="flex-shrink-0 pl-4 flex items-center cursor-pointer">
-                        <img height={26} width={sidebarDesktopOpen ? 120 : 26} src={sidebarDesktopOpen ? "./images/logoLight.svg" : "./images/logoLight.png"} alt="mytreety" />
+                    <Link to="/" className="flex-shrink-0 pl-4 flex gap-2 items-center cursor-pointe">
+                        <img height={26} width={26} src={"./images/logoLight.png"} alt="mytreety" />
+                        <p className="mt-2 text-white text-lg">Vendo</p>
                     </Link>
                     <button
                         className="flex-shrink-0 mt-2 p-1 flex items-center cursor-pointer hover:bg-[#d3eded54] rounded-md"

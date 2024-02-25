@@ -21,15 +21,10 @@ const MobileSideBar = ({ sidebarMobileOpen, setSidebarMobileOpen }) => {
                                 <CloseOutlinedIcon className="h-6 w-6 text-white" aria-hidden="true" />
                             </button>
                         </div>
-                        <div className="flex-shrink-0 px-4 flex items-center">
-                            <img
-                                height={50}
-                                width={100}
-                                className="h-8 w-auto"
-                                src="./images/logoLight.svg"
-                                alt="mytreety"
-                            />
-                        </div>
+                        <Link to="/" className="flex-shrink-0 pl-4 flex gap-2 items-center cursor-pointe">
+                            <img height={26} width={26} src={"./images/logoLight.png"} alt="mytreety" />
+                            <p className="mt-2 text-white text-lg">Vendo</p>
+                        </Link>
                         <div className="mt-5 flex-1 h-0 overflow-y-auto">
                             <nav className="px-2 space-y-1">
                                 {navigation.map((item) => !item.children ? (
